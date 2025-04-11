@@ -13,18 +13,18 @@ body {
     align-items: center;
     height: 100vh;
     max-width: 100%;
-    margin-top: 20px;
-    margin-left: 88px;
-    margin-right: 88px;
-    margin-bottom: 70px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .cardsgroup {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 840px;
-    max-width: 100%;
+    max-width: 840px;
+    width: 100%;
+    padding: 0 16px;
     
 }
 
@@ -40,6 +40,26 @@ body {
     gap: 120px;
 }
 
+@media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .card-content-left {
+      align-items: center;
+    }
+  
+    .cardimage img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+    }
+  }
+  
 .card-content-left {
     display: flex;
     width: 100%;
@@ -47,6 +67,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    gap: 40px;
 }
 
 .number {
@@ -71,12 +92,16 @@ body {
 .info {
     font-size: 16px;
     line-height: 1.5;
+    text-align: left;
 }
 
 .cardimage img {
-    width: 220px;
-    height: 220px;
     border-radius: 10px;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    object-fit: cover;
+      
 }
 
 #card-3{
@@ -90,3 +115,5 @@ body {
     background: linear-gradient(285deg, #EEE8DC -13.29%, #897243 101.09%);
     box-shadow: 0px 1px 2px 0px rgba(138, 114, 66, 0.20), 2px 2px 2px 0px rgba(228, 219, 200, 0.60) inset;
 }
+
+
